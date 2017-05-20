@@ -8,6 +8,11 @@
     vm.activeCar = {};
     vm.openDetail = function(index){
         vm.activeCar = index;
+    };
+    vm.search = "";
+    vm.quizActive = false;
+    vm.activateQuiz = function(){
+        vm.quizActive = true;
     }
   }
   var carsData = [

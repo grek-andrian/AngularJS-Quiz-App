@@ -4,6 +4,8 @@
 }
 .top-buffer{
     margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .answer{
     padding: 15px 20px;
@@ -33,4 +35,7 @@
 }
 .image-answer.bg-danger{
     border: 3px solid #b74848;
+}
+.btn {
+    margin-bottom: 5px;
 }
