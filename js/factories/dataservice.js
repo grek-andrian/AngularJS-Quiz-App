@@ -1,14 +1,17 @@
 (function(){
   angular.module("VWFacts")
-      .factory("dataService", DataFactory);
+      .factory("DataService", DataService);
 
-  function DataFactory(){
+  function DataService(){
     var dataObj = {
       carsData: carsData,
-      quizQuestions: quizQuestions
+      quizQuestions: quizQuestions,
+      correctAnswers: correctAnswers
     };
     return dataObj;
   };
+
+  var correctAnswers = [2, 1, 3, 0, 2, 0, 3, 2, 0, 3];
 
   var quizQuestions  = [
        {

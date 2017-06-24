@@ -2,20 +2,24 @@
   angular.module("VWFacts")
         .controller("listCtrl", ListController);
 
-  ListController.$inject = ["quizMetrics", "dataService"];
+  ListController.$inject = ["quizMetrics", "DataService"];
 
-  function ListController(quizMetrics, dataService){
+  function ListController(quizMetrics, DataService){
     var vm = this;
     vm.quizMetrics = quizMetrics;
-    vm.data = dataService.carsData;
+    vm.data = DataService.carsData;
     vm.activeCar = {};
     vm.openDetail = function(index){
         vm.activeCar = index;
     };
     vm.search = "";
-    vm.activateQuiz = function(){
-        quizMetrics.changeState(true);
+    vm.changeActiveTurtle = function changeActiveTurtle(index){
+           vm.activeTurtle = index;
     }
+    vm.activateQuiz = function(){
+        quizMetrics.changeState("quiz", true);
+    }
+
   }
 
 })();
